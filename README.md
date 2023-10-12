@@ -1,8 +1,6 @@
 
 # LLMMaps - A Visual Metaphor for Stratified Evaluation of Large Language Models
 
-[Our paper on Arxiv](https://arxiv.org/abs/2304.00457)
-
 
 ![LLMMap of the Performance of ChatGPT on the PubMedQA dataset](./chatgpt_pubmedqa.svg "ChatGPT Performance on PubMedQA") 
 Below we show how to use LLMMaps for visualization and how to get a raw QA dataset ready for visualization. 
