@@ -1,6 +1,7 @@
 
 # LLMMaps - A Visual Metaphor for Stratified Evaluation of Large Language Models
 
+[Our paper on Arxiv](https://arxiv.org/abs/2304.00457)
 
 ![LLMMap of the Performance of ChatGPT on the PubMedQA dataset](./chatgpt_pubmedqa.svg "ChatGPT Performance on PubMedQA") 
 Below we show how to use LLMMaps for visualization and how to get a raw QA dataset ready for visualization. 
@@ -74,3 +75,9 @@ The models we currently support in this are:
 In order to incorporate new LLM models to the analysis, you need to modify `get_answers.py` to use additional models. 
 These changes need to be made then only concern the process of getting a response for a given inquiry (Add a new case in `AnswerMachine.import_` and `AnswerMachine.get_response`). The easiest way to achieve this, is just copying an existing case and changing the code to get model response. For OpenAI and Huggingface models, this is usually not more than changing the modelname.   
 When another LLM should also be used for all parts of the knowledge stratification, you will also need to adapt `access_difficulty.py` and `generate_hierarchy.py` to use the different model. As we used ChatGPT for this, the changes to use another OpenAI model are again miniscule.
+
+## Using Existing Data Stratification
+
+Some datasets come with an existing data Stratification which can be used for the knowledge visualization with LLMMaps. An example for this are the fields and given dificulty ratings of the US Bar dataset. In order to do this, the respective labelling has to be transformed into our `.hir` data format as shown with `usbarGiven.hir`, with the resulting visualization shown below.
+
+![LLMMap of the Performance of ChatGPT on the US Bar dataset](./chatgpt_usbarGiven.svg "ChatGPT Performance on US Bar") 
